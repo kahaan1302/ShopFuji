@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShopFuji</title>
+	<link rel = "icon" href = "~/images/logo.png" 
+        type = "image/x-icon">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShopFuji.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ShopFuji </a>
+
+                <a class="nav-link text-light" id="men" asp-controller="Home" asp-action="Men">Men</a>
+                <a class="nav-link text-light" id="women" asp-controller="Home" asp-action="Women">Women</a>
+                <a class="nav-link text-light" id="kids" asp-controller="Home" asp-action="Kids">Kids</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial.cshtml" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+       
+    </div>
+    <!--
+    <footer>
+        <div class="container">
+            &copy; 2023 ShopFuji - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+<footer class="text-center text-lg-start bg-dark text-muted mt-3" style="bottom: 0">
+<!-- Section: Links  -->
+<section class="">
+	<div class="container text-center text-md-start pt-4 pb-4">
+		<!-- Grid row -->
+		<div class="row mt-3">
+			<!-- Grid column -->
+			<div class="col-12 col-lg-3 col-sm-12 mb-2">
+				<!-- Content -->
+				<a href="/" target="_blank" class="text-white h2">
+					ShopFuji
+				</a>
+				<p class="mt-1 text-white">
+					© 2023 Copyright: ShopFuji.com
+				</p>
+			</div>
+			<!-- Grid column -->
+			<!-- Grid column -->
+			<div class="col-6 col-sm-4 col-lg-2">
+				<!-- Links -->
+				<h6 class="text-uppercase text-white fw-bold mb-2">
+					Store
+				</h6>
+				<ul class="list-unstyled mb-4">
+					<li><a class="text-white-50" href="#">About us</a></li>
+					<li><a class="text-white-50" href="#">Find store</a></li>
+					<li><a class="text-white-50" href="#">Categories</a></li>
+					<li><a class="text-white-50" href="#">Blogs</a></li>
+				</ul>
+			</div>
+			<!-- Grid column -->
+			<!-- Grid column -->
+			<div class="col-6 col-sm-4 col-lg-2">
+				<!-- Links -->
+				<h6 class="text-uppercase text-white fw-bold mb-2">
+					Information
+				</h6>
+				<ul class="list-unstyled mb-4">
+					<li><a class="text-white-50" href="#">Help center</a></li>
+					<li><a class="text-white-50" href="#">Money refund</a></li>
+					<li><a class="text-white-50" href="#">Shipping info</a></li>
+					<li><a class="text-white-50" href="#">Refunds</a></li>
+				</ul>
+			</div>
+			<!-- Grid column -->
+			<!-- Grid column -->
+			<div class="col-6 col-sm-4 col-lg-2">
+				<!-- Links -->
+				<h6 class="text-uppercase text-white fw-bold mb-2">
+					Support
+				</h6>
+				<ul class="list-unstyled mb-4">
+					<li><a class="text-white-50" href="#">Help center</a></li>
+					<li><a class="text-white-50" href="#">Documents</a></li>
+					<li><a class="text-white-50" href="#">Account restore</a></li>
+					<li><a class="text-white-50" href="#">My orders</a></li>
+				</ul>
+			</div>
+			<!-- Grid column -->
+			<!-- Grid column -->
+			<div class="col-12 col-sm-12 col-lg-3">
+				<!-- Links -->
+				<h6 class="text-uppercase text-white fw-bold mb-2">Newsletter</h6>
+				<p class="text-white">Stay in touch with latest updates about our products and offers</p>
+				<div class="input-group mb-3">
+					<input type="email" class="form-control border" placeholder="Email" aria-label="Email" aria-describedby="button-addon2" />
+					<button class="btn btn-light border shadow-0" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+						Join
+					</button>
+				</div>
+			</div>
+			<!-- Grid column -->
+		</div>
+		<!-- Grid row -->
+	</div>
+</section>
+<!-- Section: Links  -->
+<section>
+<div class="">
+	<div class="container">
+		<div class="d-flex justify-content-between py-4 border-top">
+			<!--- payment --->
+			<div>
+				<i class="fab fa-lg fa-cc-visa text-white"></i>
+				<i class="fab fa-lg fa-cc-amex text-white"></i>
+				<i class="fab fa-lg fa-cc-mastercard text-white"></i>
+				<i class="fab fa-lg fa-cc-paypal text-white"></i>
+			</div>
+			<!--- payment --->
+			<!--- language selector --->
+			<div class="dropdown dropup">
+				<a class="dropdown-toggle text-white" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false"> <i class="flag-united-kingdom flag m-0 me-1"></i>English </a>
+
+				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="Dropdown">
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English <i class="fa fa-check text-success ms-2"></i></a>
+					</li>
+					<li><hr class="dropdown-divider" /></li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
+					</li>
+				</ul>
+			</div>
+			<!--- language selector --->
+		</div>
+	</div>
+</div>
+</footer>
+
+</body>
+</html>

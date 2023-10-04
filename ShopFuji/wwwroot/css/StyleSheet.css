@@ -1,0 +1,8 @@
+﻿body {
+    //background-color:aquamarine;
+   background-image: url("bg1.jpg");
+}
+
+.whole {
+    opacity: 0.5;
+}
